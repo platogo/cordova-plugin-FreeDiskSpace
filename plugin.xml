@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="org.apache.cordova.core.FreeDiskSpace"
+      version="0.1.0">
+    <name>cordova-plugin-FreeDiskSpace</name>
+    <description>cordova plugin FreeDiskSpace</description>
+
+    <js-module src="www/FreeDiskSpace.js" name="FreeDiskSpace">
+        <clobbers target="window.freeDiskSpace" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FreeDiskSpace">
+              <param name="android-package" value="org.apache.cordova.core.FreeDiskSpace"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/FreeDiskSpace.java" target-dir="src/org/apache/cordova/core" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="FreeDiskSpace">
+                <param name="ios-package" value="CDVFreeDiskSpacePlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVFreeDiskSpacePlugin.h" />
+        <source-file src="src/ios/CDVFreeDiskSpacePlugin.m" />
+    </platform>
+</plugin>
