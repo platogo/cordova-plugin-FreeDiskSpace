@@ -1,5 +1,5 @@
 var freeDiskSpacePlugin = {
-  getFreeDiskSpace: function(successCallback, errorCallback) {
+  get: function(successCallback, errorCallback) {
     cordova.exec(
       successCallback,
       errorCallback,
