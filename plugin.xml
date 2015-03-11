@@ -6,7 +6,7 @@
     <name>cordova-plugin-FreeDiskSpace</name>
     <description>cordova plugin FreeDiskSpace</description>
 
-    <js-module src="www/FreeDiskSpace.js" name="FreeDiskSpace">
+    <js-module src="www/FreeDiskSpacePlugin.js" name="FreeDiskSpace">
         <clobbers target="window.freeDiskSpace" />
     </js-module>
 
@@ -18,7 +18,7 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/FreeDiskSpace.java" target-dir="src/org/apache/cordova/core" />
+        <source-file src="src/android/FreeDiskSpacePlugin.java" target-dir="src/org/apache/cordova/core" />
     </platform>
 
     <!-- ios -->

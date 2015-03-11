@@ -1,4 +1,4 @@
-var apsalarPlugin = {
+var freeDiskSpacePlugin = {
   getFreeDiskSpace: function(successCallback, errorCallback) {
     cordova.exec(
       successCallback,
@@ -9,4 +9,4 @@ var apsalarPlugin = {
   }
 };
 
-module.exports = apsalarPlugin;
+module.exports = freeDiskSpacePlugin;
