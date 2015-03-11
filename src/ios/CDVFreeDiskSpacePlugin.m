@@ -4,17 +4,18 @@
 
 - (void)get: (CDVInvokedUrlCommand*)command
 {
-    uint64_t totalFreeSpace = 0;
+    uint64_t totalFreeSpaceKiloBytes = 0;
     NSError *error = nil;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSDictionary *dictionary = [[NSFileManager defaultManager] attributesOfFileSystemForPath:[paths lastObject] error: &error];
 
     if (dictionary) {
         NSNumber *freeFileSystemSizeInBytes = [dictionary objectForKey:NSFileSystemFreeSize];
-        totalFreeSpace = [freeFileSystemSizeInBytes unsignedLongLongValue];
+        totalFreeSpaceKiloBytes = [freeFileSystemSizeInBytes unsignedLongLongValue] / 1024ll;
     }
 
-    CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:[[NSNumber numberWithFloat:totalFreeSpace] stringValue]];
+    NSNumber* totalFreeSpaceNumber = [NSNumber numberWithUnsignedLongLong:totalFreeSpaceKiloBytes];
+    CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:[totalFreeSpaceNumber stringValue]];
 
     [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
