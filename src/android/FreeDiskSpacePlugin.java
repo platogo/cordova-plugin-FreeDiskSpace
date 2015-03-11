@@ -32,9 +32,6 @@ public class FreeDiskSpacePlugin extends CordovaPlugin {
                 if (status.equals(Environment.MEDIA_MOUNTED)) {
                     freeSpace = freeSpaceCalculation(Environment.getExternalStorageDirectory().getPath());
                 }
-                else if (checkInternal) {
-                    freeSpace = freeSpaceCalculation("/");
-                }
 
                 callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, freeSpace));
             }
