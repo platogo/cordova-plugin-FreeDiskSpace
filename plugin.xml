@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-           id="org.apache.cordova.core.FreeDiskSpacePlugin"
+           id="com.platogo.cordova.freediskspace"
       version="0.1.0">
-    <name>cordova-plugin-FreeDiskSpace</name>
-    <description>cordova plugin FreeDiskSpace</description>
+    <name>Cordova Free Disk Space</name>
+    <description>Cordova Free Disk Space</description>
 
-    <js-module src="www/FreeDiskSpacePlugin.js" name="FreeDiskSpacePlugin">
-        <clobbers target="window.freeDiskSpacePlugin" />
+    <js-module src="www/free-disk-space.js" name="FreeDiskSpace">
+        <clobbers target="window.freeDiskSpace" />
     </js-module>
 
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="FreeDiskSpacePlugin">
-              <param name="android-package" value="org.apache.cordova.core.FreeDiskSpacePlugin"/>
+            <feature name="FreeDiskSpace">
+              <param name="android-package" value="com.platogo.cordova.freediskspace.FreeDiskSpace"/>
             </feature>
         </config-file>
 
-        <source-file src="src/android/FreeDiskSpacePlugin.java" target-dir="src/org/apache/cordova/core" />
+        <source-file src="src/android/FreeDiskSpace.java" target-dir="src/com/platogo/cordova/freediskspace" />
     </platform>
 
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="FreeDiskSpacePlugin">
-                <param name="ios-package" value="CDVFreeDiskSpacePlugin" />
+            <feature name="FreeDiskSpace">
+                <param name="ios-package" value="CDVFreeDiskSpace" />
                 <param name="onload" value="true" />
             </feature>
         </config-file>
-        <header-file src="src/ios/CDVFreeDiskSpacePlugin.h" />
-        <source-file src="src/ios/CDVFreeDiskSpacePlugin.m" />
+        <header-file src="src/ios/CDVFreeDiskSpace.h" />
+        <source-file src="src/ios/CDVFreeDiskSpace.m" />
     </platform>
 </plugin>

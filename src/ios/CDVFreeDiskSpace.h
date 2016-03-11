@@ -1,6 +1,6 @@
 #import <Cordova/CDV.h>
 
-@interface CDVFreeDiskSpacePlugin: CDVPlugin
+@interface CDVFreeDiskSpace: CDVPlugin
 
 - (void)get: (CDVInvokedUrlCommand*)command;
 

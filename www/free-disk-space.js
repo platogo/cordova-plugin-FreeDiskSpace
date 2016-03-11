@@ -1,12 +1,11 @@
-var freeDiskSpacePlugin = {
+module.exports = {
   get: function(successCallback, errorCallback) {
     cordova.exec(
       successCallback,
       errorCallback,
-      'FreeDiskSpacePlugin',
+      'FreeDiskSpace',
       'get', []
     );
   }
 };
 
-module.exports = freeDiskSpacePlugin;

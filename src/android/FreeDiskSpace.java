@@ -1,4 +1,4 @@
-package org.apache.cordova.core;
+package com.platogo.cordova.freediskspace;
 
 import android.os.Environment;
 import android.os.StatFs;
@@ -9,7 +9,7 @@ import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-public class FreeDiskSpacePlugin extends CordovaPlugin {
+public class FreeDiskSpace extends CordovaPlugin {
     public static final String ACTION_GET = "get";
 
     @Override
