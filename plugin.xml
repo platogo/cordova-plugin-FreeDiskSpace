@@ -25,11 +25,11 @@
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="FreeDiskSpace">
-                <param name="ios-package" value="CDVFreeDiskSpace" />
+                <param name="ios-package" value="FreeDiskSpace" />
                 <param name="onload" value="true" />
             </feature>
         </config-file>
-        <header-file src="src/ios/CDVFreeDiskSpace.h" />
-        <source-file src="src/ios/CDVFreeDiskSpace.m" />
+        <header-file src="src/ios/FreeDiskSpace.h" />
+        <source-file src="src/ios/FreeDiskSpace.m" />
     </platform>
 </plugin>

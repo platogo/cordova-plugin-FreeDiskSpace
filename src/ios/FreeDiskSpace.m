@@ -1,6 +1,6 @@
-#import "CDVFreeDiskSpace.h"
+#import "FreeDiskSpace.h"
 
-@implementation CDVFreeDiskSpace
+@implementation FreeDiskSpace
 
 - (void)get: (CDVInvokedUrlCommand*)command
 {
