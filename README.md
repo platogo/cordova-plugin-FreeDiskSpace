@@ -1,1 +1,1 @@
-# cordova-plugin-FreeDiskSpace
+# cordova-plugin-freediskspace
